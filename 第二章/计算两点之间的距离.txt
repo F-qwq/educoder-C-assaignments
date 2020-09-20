@@ -1,0 +1,16 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+    double location1[2], location2[2];
+    double distance;
+    cin >> location1[0] >> location1[1];
+    cin >> location2[0] >> location2[1];
+    distance = sqrt(pow(location1[0] - location2[0], 2) + pow(location1[1] - location2[1], 2));
+    cout << "(" << location1[0] << "," << location1[1] << ")和(" << location2[0] << "," << location2[1] << ")之间的距离是：" << setiosflags(ios::fixed) << setprecision(2) << distance;
+    return 0;
+}
