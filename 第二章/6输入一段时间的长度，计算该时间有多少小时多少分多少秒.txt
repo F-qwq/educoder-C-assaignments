@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int hour, minute, second;
+    cin >> second;
+    cout << second;
+    hour = second / 3600;
+    second -= 3600 * hour;
+    minute = second / 60;
+    second -= 60 * minute;
+    cout << "秒为" << hour << "小时" << minute << "分" << second << "秒";
+    return 0;
+}
+
