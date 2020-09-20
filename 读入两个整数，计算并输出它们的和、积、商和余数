@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int num1, num2, sum, product, quotient, remainder;
+    cin >> num1 >> num2;
+    sum = num1 + num2;
+    product = num1 * num2;
+    quotient = num1 / num2;
+    remainder = num1 - num2 * quotient;
+    cout << num1 << "+" << num2 << "=" << sum << endl ;
+    cout << num1 << "*" << num2 << "=" << product << endl ;
+    cout << num1 << "/" << num2 << "=" << quotient << endl ;
+    cout << num1 << "%" << num2 << "=" << remainder << endl ;
+}
