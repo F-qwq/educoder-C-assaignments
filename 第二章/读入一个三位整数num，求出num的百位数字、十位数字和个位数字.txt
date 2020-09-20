@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int num, digit_e2, digit_e1, digit_e0;
+    cin >> num;
+    cout << num;
+    digit_e2 = num / 100;
+    num -= 100 * digit_e2;
+    digit_e1 = num / 10;
+    num -= 10 * digit_e1;
+    digit_e0 = num;
+    cout << "的百位数字是" << digit_e2 << "，十位数字是" << digit_e1 << "，个位数字是" << digit_e0;
+}
