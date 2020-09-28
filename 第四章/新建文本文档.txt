@@ -1,0 +1,40 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    char original_n[5], encrypted_n[5], original_m[5], encrypted_m[5];
+    int component_n[4], component_m[4], holder, i;
+    cin >> original_n >> encrypted_m;
+    for (i = 0; i < 4;i++) {
+        component_n[i] = (int(original_n[i] - 48) + 7) % 10;
+        encrypted_n[i] = component_n[i] + 48;
+        component_m[i] = (int(encrypted_m[i] - 48 + 10) - 7) % 10;
+        original_m[i] = component_m[i] + 48;
+    }
+    holder = encrypted_n[0];
+    encrypted_n[0] = encrypted_n[2];
+    encrypted_n[2] = holder;
+    holder = encrypted_n[1];
+    encrypted_n[1] = encrypted_n[3];
+    encrypted_n[3] = holder;
+    holder = original_m[0];
+    original_m[0] = original_m[2];
+    original_m[2] = holder;
+    holder = original_m[1];
+    original_m[1] = original_m[3];
+    original_m[3] = holder;
+    encrypted_n[4] = 0;
+    original_m[4] = 0;
+    if (encrypted_n[0] == 48) {
+        for (int i = 0; i < 4; i++) {
+            encrypted_n[i] = encrypted_n[i + 1];
+        }
+    }
+    if (original_m[0] == 48) {
+        for (int i = 0; i < 4; i++) {
+            original_m[i] = original_m[i + 1];
+        }
+    }
+    cout << encrypted_n << " " << original_m;
+}
